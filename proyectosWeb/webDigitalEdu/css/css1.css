@@ -1,0 +1,816 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+    --gold1:#F4BD76;
+    --gold2:#F6CD8F;
+    --gray:#ffffff80; /*agregar 2 digitos más a un color hexadecimal, quiere decir que es la transparencia*/
+    --gray2:#f7d9d990;
+    --black1:#1a1b1f;
+    --black2:#30353b;
+    --shadow:0 8px 8px;
+    --color_shadow:00000033;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px; /*que el 90% no rebase los 1200 px*/
+    margin: 0 auto; /*auto hacia los lados, el 90% se centra*/
+    overflow: hidden;/*si algo llega a salir del contenedor, no quiero que se vea*/
+    padding: 100px 0;
+    height: auto;
+     
+}
+
+.container--modifier{
+    width:60%;
+}
+
+.hero{
+    width:100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #30353b 0%, #1a1b1f 100%); /*la direccción a 180 grados, stop del 0%*/
+}
+.nav__hero{
+    color:#fff; 
+    height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav__container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height:inherit;
+    padding: 0%;
+}
+
+.logo__name{
+    font-size: 24px;
+}
+
+.link{
+    display:inline-block;
+    color: inherit; /*heredado*/
+    text-decoration: none;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.link--active{
+    color: var(--gold1);
+    font-weight: 700;
+}
+
+.point{
+    color:var(--gold1);
+}
+
+.hero__main{
+    height: calc(100vh - 70px);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.mockup{
+    object-fit: cover; /*para que la img no se pixelee*/
+    width:48%;
+    max-height: 90vh;
+}
+
+.hero__textos{
+    width:48%;
+}
+
+.title{
+    font-size: 56px;
+    font-weight:300;
+    color:#fff;
+}
+
+.title--active{
+    color: var(--gold1);
+    font-weight: 700;
+}
+
+.copy{
+    font-size:24px;
+    color: var(--gray);
+    text-shadow:  var(--shadow) var(--color_shadow);
+    margin: 15px 0;
+}
+
+.copy__active{
+    font-weight: 700;
+}
+
+.cta{
+    padding: 20px 30px;
+    display: inline-block;
+    background: linear-gradient(180deg, #f7ce90 0%, #f48d76 100%);
+    text-decoration: none;
+    color: var(--black2);
+    font-weight: 700;
+    box-shadow: var(--shadow) var(--color_shadow);
+    border-radius: 6px; 
+}
+
+.services{
+    background: #fafafa;
+}
+
+.subtitle{
+    font-size: 42px;
+}
+
+.subtitle--modifier{
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.copy__section{
+    color: var(--black2);
+    font-size: 22px;
+    line-height: 32px;/*tamaño de la linea vertical*/
+    margin-bottom: 60px;
+}
+
+.copy__section--modifier{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.container-cards{
+    display:flex;/*para que los items se pongan en la misma linea*/
+    justify-content: space-between; /*para que se pongan a las esquinas*/
+    align-items: center;
+    flex-wrap: wrap;/*en caso que ya no tengan espacio, se vayan hacia abajo*/
+}
+
+.card{
+    width: 30%;
+    padding:20px 0; /*arriba y abajo sobre el contenedor de la .card*/
+    overflow: hidden;/*permite regular la visiblidad de los contenidos que sobresalen de una caja html*/
+    background: linear-gradient(180deg, #30353b 0%, #1a1b1f 100%); /*la direccción a 180 grados, stop del 0%*/
+    border-radius: 10px;
+    position: relative;/*su posición dependerá del lugar donde esté en el código y el flujo HTML*/
+    text-align: right;
+    margin-bottom: 60px;
+    box-shadow: 0 0 60px var(--color_shadow);/*efectos de sombra alrededor del marco de un elemento*/
+}
+
+.card_img{
+    width:95%;
+    height:200px;
+    object-fit: cover; /*debería redimensionarse para ajustarse a su contenedor*/
+    border-radius: 10px 0 0 10px;
+}
+
+.cards__text{
+    text-align:left;
+    width:90%;
+    margin:0 auto;/*auto hacia los lados*/
+}
+
+.card_list{
+    color: var(--gold2);
+    font-weight: 700; /*peso o grueso de la letra*/
+    margin: 25px 0 12px;
+    font-size: 18px;
+}
+
+.card__title{
+    font-size: 40px;
+    color:#fff;
+    margin-bottom: 8px;
+}
+
+.card__copy{
+    color: var(--gray2);
+    margin-bottom: 16px;
+}
+
+.card__button{
+    display:block;
+    background: linear-gradient(180deg, #f7ce90 0%, #f48d76 100%);
+    border-radius: 6px;
+    text-decoration: none;
+    width: 100%;
+    color: var(--black1);
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.card_date{
+    color: var(--gold2);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom:16px;
+}
+
+.container-bg{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.background{
+    width:60%;
+    height:290px;
+    border-radius: 10px;
+    position:relative;
+    margin-bottom:60px;
+}
+
+.background_img{
+    width:100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.background_text{
+    position: absolute;
+    width:100%;
+    bottom: 30px;
+    left: 15px;
+    color:#fff;
+}
+
+.background__title{
+    font-size: 24px;
+    margin-bottom:4px
+}
+
+.testimony{
+    background:#fafafa;
+}
+
+.testimony-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.testimony__card{
+    width: 30%;
+    height: 500px;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%); /*la direccción a 180 grados, stop del 0%*/
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 30px;
+    display:block;
+}
+
+.testimony__img{
+    width:100%;
+    height:100%;
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: center top;
+    
+}
+
+.testimony__copy{
+    position: absolute;
+    bottom: 20px;/*Empujar desde abajo 20 pixeles hacia arriba*/
+    left: 5%;
+    width: 90%; /*Empujar de izquierda a derecha 5%*/
+    background: linear-gradient(180deg, #30353b 0%, #1a1b1f 100%); /*la direccción a 180 grados, stop del 0%*/
+    color:#fff;
+    margin:auto;
+    border-radius: 10px;
+    box-shadow:  var(--shadow) var(--color_shadow);
+    padding:15px 8px;
+    display:flex;
+    align-items: center;
+}
+
+.testimony__copy--modifier{
+    background: none;
+    box-shadow: none;
+}
+.testimony__logo{
+    width: 30%;
+    font-size: 40px;
+    display:inline-block;
+    
+}
+
+.testimony_name{
+    font-style: 24px;
+    line-height: 28px;
+}
+
+.testimony__position{
+    color: var(--gray);
+}
+
+.testimony__text{
+    padding: 20% 10%;
+    width:90%;
+    margin:0 auto;
+    color:#fff;
+}
+
+.google__logo{
+    width: 20%;
+}
+
+
+.testimony__history{
+    font-style: 21px;
+    font-weight: 300;
+}
+
+.testimony__info{
+    width:70%;
+}
+
+.logo--picture{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center top;
+}
+
+/*check*/
+
+.check{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin:0 auto;
+}
+
+.check__item{
+    width:30%;
+    padding-right: 10px;
+    display: flex;
+    border-right: 2px solid var(--black2);
+}
+
+.bx-check{
+    background: linear-gradient(180deg, var(--black2)0%, var(--black1) 100%); /*la direccción a 180 grados, stop del 0%*/
+    display:inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-right: 20px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.check__number{
+    font-weight: 700;
+}
+
+.check__copy{
+    font-weight: 300;
+}
+
+.newsletter{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: auto;
+    font-family: inherit;
+    position: relative;
+    border-radius: 6px;
+}
+
+.newsletter__modifier{
+    margin: 0;
+    width: 80%;
+}
+
+.newsletter__input{
+    width: 100%;
+    height:100%;
+    padding: 22px 10px;
+    outline: none; /*Los contornos no ocupan espacio, son dibujados por encima del elemento. Por lo tanto, su aparición u ocultamiento no causa un redibujado de las cajas. No suma en el tamaño de la caja y no hay movimiento o desplazamiento de los elementos como con border.*/
+    font-family: inherit; 
+    border-radius: 6px;
+    border: 1px solid var(--black1); 
+}
+
+.newsletter__submit{
+    position: absolute;
+    right: 8px;
+    top: 10%;
+    height: 80%;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    color: #fff;
+    padding: 0 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight:700;
+}
+
+.footer{
+    background: #fafafa;
+}
+
+.footer__caption{
+    display:flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+}
+
+.title__footer{
+    font-size: 24px;
+    margin: bottom 32px;
+}
+
+                        /*SECCION DOWNLOAD*/
+
+.download{
+    width:50%;
+}
+
+.download__app{
+    display:flex;
+}
+
+.download__item{
+    display:flex;
+    padding: 18px 22px;
+    border-radius: 6px;
+    border: 1px solid var(--black2);
+    width:42%;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.download__logo{
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.download__title{
+    font-size: 18px;
+}
+
+.footer__copy{
+    width: 100%;
+    color: var(--black2);
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.copyright{
+    width:100%; /* para que ocupe solo una linea*/
+}
+
+.politica__privacidad{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.politica__privacidad:hover{
+    text-decoration: underline;
+}
+
+.politica__privacidad--margin{
+    margin-right: 10px; 
+}
+
+                        /*SECCION GET EMAIL*/
+
+.get__email{
+    width: 50%;
+}
+
+.socialmedia{
+    margin-top: 24px;
+    display: flex;
+    color: var(--black2);
+}
+
+.socialmedia__icon{
+    font-size: 18px;
+    margin-right: 30px;
+    display:inline-block;
+}
+
+.socialmedia__legend{
+    color: var(--black2);
+    margin-right: 16px;
+}
+
+.contact{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    color:#fff;
+}
+
+.item__contact{
+    width:25%;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+}
+
+.item__contact--gold{
+    background: linear-gradient(180deg, #f7ce90 0%, #f48d76 100%);
+    color: var(--black1);
+}
+
+.contact__icon{
+    font-size:14px;
+    color: var(--gold1);
+    line-height:20px;
+    margin-right: 4px;
+}
+
+.contact__icon--modifier{
+    color: var(--black1);
+}
+
+.contact__title{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+                                        /*********RESPONSIVE**********/
+@media screen and (max-width:900px){
+
+                                /*HEADER*/
+    .mockup{
+        width: 600px;
+        height:auto;
+    }
+
+    .title{
+        font-size: 50px;
+    }
+
+    .copy{
+        font-size: 22px;
+    }
+
+    .cta{
+        padding: 15px 22px;
+    }
+
+                                /*SECION 1*/
+    .container-cards{
+        justify-content: space-evenly;
+    }
+
+    .services .card{ /*elementos card que estén dentro de services*/
+        width: 45%;
+    }
+
+                                /*SECCION 2, proyectos recientes*/
+    .background{
+        width:52%;
+    }
+
+    .card{
+        width: 42%;
+    }
+
+                                /*SECCION 3, Clientes Satisfechos*/
+    .testimony-container{
+        justify-content: space-evenly;
+    }
+
+    .testimony__card{
+        width: 45%;
+    }
+
+                                /*SECCION 4, Somos tu mejor opcion*/
+    .check__item{
+        width: 45%;
+        margin-bottom: 35px;
+    }
+
+    .newsletter{
+        width:80%;
+    }
+
+                                /*FOOTER*/
+    .download{
+        width:100%;
+    }
+
+    .download__app{
+        justify-content: space-between;
+    }
+
+    .download__item{
+        width:45%;
+    }
+
+    .get__email{
+        width:100%;
+        margin-bottom: 40px;
+    }
+
+    .socialmedia__icon{
+        font-size: 18px;
+    }
+
+    .socialmedia__legend{
+        font-size: 18px;
+    }
+}
+ 
+        /*RESPONSIVE*/
+@media screen and (max-width:700px){
+        
+    /*HEADER*/
+    main .container,
+    footer .container{
+        padding:60px 0;
+    }
+    .nav__container{
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .nav__hero{
+        height: auto;
+    }
+
+    .logo{
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .links{
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .link{
+        padding: 7px 10px; 
+    }
+
+    .hero__main{
+        flex-direction: column-reverse; /*el texto y la imagen cambian de lugar*/
+        justify-content: flex-end; /*para que se posicione al principio*/
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .hero__textos{
+        width: 100%;
+        text-align: center;
+    }
+
+    .mockup{
+        width:80%;
+        margin-bottom: 20px;
+    }
+
+    .title{
+        font-size:35px;
+    }
+
+    /*SECCION 1 NUESTROS SERVICIOS*/
+
+    .subtitle{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .services .card{
+        width: 80%;
+    }
+
+    /*SECCION 2, Proyectos recientes*/
+
+    .container-bg{
+        justify-content: space-evenly;
+    }
+
+    .card{
+        margin-bottom: 40px;
+        width:65%;
+    }
+
+    .card__title{
+        font-size: 35px;
+    }
+
+    .card__button{
+        width:100%
+    }
+
+    .background{
+        width:65%;
+        margin-bottom: 40px; 
+    }
+
+    .background_copy{
+        display:none;
+    }
+
+    .testimony__card{
+        width: 65%;
+    }
+
+    .testimony_name{
+        font-size:20px;
+    }
+
+    .container--modifier{
+        width: 80%;
+    }
+
+    /*FOOTER*/
+
+    .item__contact{
+        width: 100%;
+        padding: 30px 0;
+    }
+}
+ 
+            /*350 pixeles es el límite*/
+@media screen and (max-width:500px){
+    .mockup{
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .services .card{
+        width: 95%;
+    }
+
+    .card{
+        width: 95%;
+    }
+
+    .background{
+        width: 95%;
+    }
+
+    .testimony__card{
+        width: 95%;
+    }
+
+    .testimony__history{
+        font-size: 20px;
+    }
+
+    .container--modifier{
+        width: 90%;
+    }
+
+    .newsletter{
+        width:100%;
+        display: none; /*deberían desaparecer*/
+    }
+
+    .newsletter__modifier{
+        display: block; /*debería aparecer solo el segundo input*/
+    }
+
+    .check__item{
+        width: 100%;
+        border: none;
+        padding: none;
+        justify-content: center;
+    }
+
+    .download__item{
+        width: 49%;
+    }
+
+    .download__title{
+        font: size 16px;
+    }
+
+    .download__logo{
+        font-size: 30px;
+    }
+
+}
+
+
+
+
