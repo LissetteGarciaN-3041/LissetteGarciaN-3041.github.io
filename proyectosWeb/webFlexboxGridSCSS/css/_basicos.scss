@@ -1,0 +1,42 @@
+@import '_variables';
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $roboto;
+}
+
+body{
+    color: $bodyc;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color:$logo;
+}
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:1200px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+
+
