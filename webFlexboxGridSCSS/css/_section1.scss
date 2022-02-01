@@ -1,0 +1,125 @@
+.container{
+    background: $white-color;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    .row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: -15px;
+        margin-left: -15px;
+        .on-w{
+            display: flex;
+            flex: 0 0 50%;
+            max-width: 50%;
+            flex-direction: column;
+            padding-right: 15px;
+            position: relative;
+            width: 100%;
+            padding-left: 15px;
+            
+            h5{
+                margin-bottom: 10px;
+                font-size: 32px;
+                line-height: 38px;
+                font-weight: 600;
+                font-family: $poppins;
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                color: $text-color;
+                opacity: 0.8;
+                margin-bottom: 20px;
+            }
+            .btn-wh{
+                margin-top: 1rem;
+                .btn-rm{
+                text-transform: capitalize;
+                background: $orange-c;
+                padding: 15px 35px;
+                color:$white-color;
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 5%;
+                transition: 0.3s ease-in;
+                @include border-radius-btn(5px);
+                &:hover{
+                    background: $base-color;
+                }
+            }
+            
+            }
+            
+        }
+        .tw-w{
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            flex: 0 0 50%;
+            max-width: 50%;
+            overflow: hidden;
+            img{
+                max-width: 100%;
+                display: block;
+                @include border-radius-btn(4px);
+            }
+        } 
+    }
+}
+
+@media(max-width:992px){
+    
+    .container{
+        max-width: 720px;
+        .row{
+            flex-direction: column;
+            .on-w{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .tw-w{
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-top: 3rem;height: auto;
+                padding: 0;
+                img{
+                    width: 100%;
+                }
+            }
+        } 
+    }
+}
+@media(max-width: 768px){
+    .container{
+        max-width: 720px;
+        .row{
+            display:grid;
+            gap: 30px;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 750px){
+    .container {
+        max-width: 570px;
+    }
+}
+@media (max-width: 586px){
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 563px){
+    .container {
+        max-width: 440px;
+    }
+}
+
+
+
+
